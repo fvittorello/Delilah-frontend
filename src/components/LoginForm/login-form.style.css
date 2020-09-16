@@ -1,0 +1,10 @@
+.login-form {
+	width: 360px;
+	height: 160px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+
+	background-color: #e2e2e2;
+}
