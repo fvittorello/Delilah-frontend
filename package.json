@@ -18,7 +18,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"format": "prettier --config .prettierrc --write \"src/*/.{js,ts,scss,jsx,tsx,html}\"",
-		"format-staged": "prettier --config .prettierrc --write"
+		"format-staged": "prettier --config .prettierrc --write",
+		"lint": "eslint src/**/*.{js, jsx}"
 	},
 	"husky": {
 		"hooks": {
@@ -28,8 +29,8 @@
 	},
 	"lint-staged": {
 		"*.{js, jsx}": [
-			"format-staged",
-			"eslint"
+			"npm run format-staged",
+			"npm run lint"
 		]
 	},
 	"eslintConfig": {
@@ -51,6 +52,7 @@
 		]
 	},
 	"devDependencies": {
+		"eslint": "^7.10.0",
 		"husky": "^4.3.0",
 		"lint-staged": "^10.4.0"
 	}
