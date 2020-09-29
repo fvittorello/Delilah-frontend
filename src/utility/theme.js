@@ -1,24 +1,35 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-const palette = {
-	primary: {
-		main: '#fc885c',
-	},
-	secondary: {
-		main: '#3addda',
-	},
-	// paleBlack: {
-	//     main: '#414d55'
-	// }
-};
-
-const shape = {
-	borderRadius: '50%',
-};
-
 const theme = createMuiTheme({
-	palette,
-	shape,
+	palette: {
+		primary: {
+			main: '#fc885c',
+		},
+		secondary: {
+			main: '#3addda',
+		},
+		error: {
+			main: '#ef4a5a',
+		},
+		orange: {
+			main: '#ff7342',
+		},
+		warning: {
+			main: '#ffc641',
+		},
+		info: {
+			main: '#a9b9f7',
+		},
+		success: {
+			main: '#30d694',
+		},
+		paleGray: {
+			main: '#7d94a3',
+		},
+	},
+	shape: {
+		borderRadius: '0.125rem',
+	},
 });
 
 export default theme;
