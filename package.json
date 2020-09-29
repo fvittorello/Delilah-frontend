@@ -21,7 +21,10 @@
 		"format-staged": "prettier --config .prettierrc --write"
 	},
 	"husky": {
-		"hooks": {}
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "lint-staged"
+		}
 	},
 	"lint-staged": {
 		"*.{js, jsx}": [
