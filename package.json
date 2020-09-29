@@ -16,18 +16,17 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"format": "prettier --config .prettierrc --write \"src/*/.{js,ts,scss,jsx,tsx,html}\"",
+		"format-staged": "prettier --config .prettierrc --write"
 	},
 	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
+		"hooks": {}
 	},
 	"lint-staged": {
 		"*.{js, jsx}": [
-			"npm run prettier --write",
-			"npm run eslint",
-			"git add"
+			"format-staged",
+			"eslint"
 		]
 	},
 	"eslintConfig": {
