@@ -1,7 +1,6 @@
 import React from 'react';
-import { ThemeProvider } from '@material-ui/core';
+import { ThemeProvider, CssBaseline } from '@material-ui/core';
 import theme from 'style_utils/theme';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
 
 // import Login from 'views/Login';
