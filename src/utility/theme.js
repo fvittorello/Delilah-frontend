@@ -12,7 +12,9 @@ const theme = createMuiTheme({
 			main: '#ef4a5a',
 		},
 		orange: {
+			light: '#ff8f67',
 			main: '#ff7342',
+			dark: '#b2502e',
 		},
 		warning: {
 			main: '#ffc641',
@@ -24,7 +26,9 @@ const theme = createMuiTheme({
 			main: '#30d694',
 		},
 		paleGray: {
+			light: '#97a9b5',
 			main: '#7d94a3',
+			dark: '#576772',
 		},
 	},
 	shape: {
