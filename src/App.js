@@ -1,7 +1,7 @@
 import React from 'react';
-import { ThemeProvider } from '@material-ui/core';
-import theme from 'utility/theme';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider, CssBaseline } from '@material-ui/core';
+import { GlobalStyle } from 'style_utils/globalStyle';
+import theme from 'style_utils/theme';
 import './App.css';
 
 // import Login from 'views/Login';
@@ -12,6 +12,7 @@ function App() {
 	return (
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
+			<GlobalStyle />
 			<RegisterView />
 		</ThemeProvider>
 	);
