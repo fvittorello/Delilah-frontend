@@ -1,4 +1,6 @@
 import React from 'react';
+import { ThemeProvider } from '@material-ui/core';
+import theme from 'utility/theme';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import './App.css';
 
@@ -6,12 +8,12 @@ import './App.css';
 import RegisterView from 'views/Register';
 
 function App() {
-	// return <div>Hello World React</div>;
+	// console.log(theme);
 	return (
-		<>
+		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<RegisterView />
-		</>
+		</ThemeProvider>
 	);
 }
 
