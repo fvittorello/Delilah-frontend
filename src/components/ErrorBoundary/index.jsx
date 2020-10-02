@@ -14,6 +14,8 @@ export class ErrorBoundary extends React.Component {
 	componentDidCatch(error, errorInfo) {
 		console.error(error, errorInfo);
 		this.setState({
+			hasError: true,
+			error,
 			errorInfo,
 		});
 	}
@@ -21,10 +23,10 @@ export class ErrorBoundary extends React.Component {
 		if (this.state.hasError) {
 			return (
 				<ErrorContainer>
-					<Typography variant='h2' component='h1' color='primary' align='left'>
-						Something went wrong.
+					<Typography variant='h2' component='h1' color='textSecondary'>
+						Something went wrong...
 					</Typography>
-					<Typography variant='h3' component='h2' color='warning' align='left'>
+					<Typography variant='h3' component='h2' color='error'>
 						{this.state.error && this.state.errorInfo.toString()}
 						<br />
 						{this.state.errorInfo.componentStack}
