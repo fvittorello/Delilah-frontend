@@ -5,7 +5,7 @@ import { ErrorContainer } from './styles';
 export class ErrorBoundary extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { hasError: false, errorInfo: null };
+		this.state = { hasError: false, error: null, errorInfo: null };
 	}
 
 	static getDerivedStateFromError(error) {
@@ -25,7 +25,9 @@ export class ErrorBoundary extends React.Component {
 						Something went wrong.
 					</Typography>
 					<Typography variant='h3' component='h2' color='warning' align='left'>
-						{this.state.errorInfo}
+						{this.state.error && this.state.errorInfo.toString()}
+						<br />
+						{this.state.errorInfo.componentStack}
 					</Typography>
 				</ErrorContainer>
 			);

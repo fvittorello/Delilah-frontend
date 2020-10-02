@@ -7,6 +7,12 @@ export default function RegisterView() {
 		<div className='register-page'>
 			<h2 children='Delilah Restó' />
 			<RegisterForm />
+			<button
+				type='button'
+				onClick={() => {
+					throw new Error('error test');
+				}}
+			/>
 		</div>
 	);
 }
