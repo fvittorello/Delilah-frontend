@@ -13,8 +13,6 @@ export class ErrorBoundary extends React.Component {
 			error,
 			errorInfo,
 		});
-		console.log({ error });
-		console.log({ errorInfo });
 	}
 	render() {
 		if (this.state.errorInfo) {
