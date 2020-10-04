@@ -5,29 +5,26 @@ import { ErrorContainer } from './styles';
 export class ErrorBoundary extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { hasError: false, error: null, errorInfo: null };
+		this.state = { error: null, errorInfo: null };
 	}
 
-	static getDerivedStateFromError(error) {
-		return { hasError: true };
-	}
 	componentDidCatch(error, errorInfo) {
-		console.error(error, errorInfo);
 		this.setState({
-			hasError: true,
 			error,
 			errorInfo,
 		});
+		console.log({ error });
+		console.log({ errorInfo });
 	}
 	render() {
-		if (this.state.hasError) {
+		if (this.state.errorInfo) {
 			return (
 				<ErrorContainer>
 					<Typography variant='h2' component='h1' color='textSecondary'>
 						Something went wrong...
 					</Typography>
-					<Typography variant='h3' component='h2' color='error'>
-						{this.state.error && this.state.errorInfo.toString()}
+					<Typography variant='h4' component='h2' color='error'>
+						{this.state.error && this.state.error.toString()}
 						<br />
 						{this.state.errorInfo.componentStack}
 					</Typography>
